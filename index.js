@@ -14,39 +14,39 @@ $(document).ready(function () {
     });
 
     $("#heatHour").change(function () {
-        heatTime.hour = Number(Number($("#heatHour").val()));
+        heatTime.hour = Number($("#heatHour").val());
         runTime = getTotalTime(heatTime, holdTime, cooldownTime);
         finish.setTime(getFinishTime(start, runTime));
         updatePage(runTime, finish);
     });
     $("#heatMinute").change(function () {
-        heatTime.minute = Number(Number($("#heatMinute").val()));
+        heatTime.minute = Number($("#heatMinute").val());
         runTime = getTotalTime(heatTime, holdTime, cooldownTime);
         finish.setTime(getFinishTime(start, runTime));
         updatePage(runTime, finish);
     });
 
     $("#holdHour").change(function () {
-        holdTime.hour = Number(Number($("#holdHour").val()));
+        holdTime.hour = Number($("#holdHour").val());
         runTime = getTotalTime(heatTime, holdTime, cooldownTime);
         finish.setTime(getFinishTime(start, runTime));
         updatePage(runTime, finish);
     });
     $("#holdMinute").change(function () {
-        holdTime.minute = Number(Number($("#holdMinute").val()));
+        holdTime.minute = Number($("#holdMinute").val());
         runTime = getTotalTime(heatTime, holdTime, cooldownTime);
         finish.setTime(getFinishTime(start, runTime));
         updatePage(runTime, finish);
     });
 
     $("#cooldownHour").change(function () {
-        cooldownTime.hour = Number(Number($("#cooldownHour").val()));
+        cooldownTime.hour = Number($("#cooldownHour").val());
         runTime = getTotalTime(heatTime, holdTime, cooldownTime);
         finish.setTime(getFinishTime(start, runTime));
         updatePage(runTime, finish);
     });
     $("#cooldownMinute").change(function () {
-        cooldownTime.minute = Number(Number($("#cooldownMinute").val()));
+        cooldownTime.minute = Number($("#cooldownMinute").val());
         runTime = getTotalTime(heatTime, holdTime, cooldownTime);
         finish.setTime(getFinishTime(start, runTime));
         updatePage(runTime, finish);
