@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wie lang braucht mein Ofen?</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha384-MYL22lstpGhSa4+udJSGro5I+VfM13fdJfCbAzP9krCEoK5r2EDFdgTg2+DGXdj+"
+        crossorigin="anonymous"></script>
+    <!-- custom JS -->
+    <script src="time.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Wie lang braucht mein Ofen?</h1>
+        <div class="mb-3 row">
+            <label for="startDate" class="form-label">Start</label>
+            <input type="datetime-local" class="form-control" name="startDate" id="startDate">
+        </div>
+        <div class="g-3 row row-cols-lg-auto align-items-center">
+            <div class="col-sm-1">
+                <label for="runHour" class="form-label">Gesamtzeit</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" name="runHour" id="runHour" style="width: 1em" disabled>
+                    <span class="input-group-text">:</span>
+                    <input type="number" class="form-control" name="runMinute" id="runMinute" max="60" disabled>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <label for="heatHour" class="form-label">Heizzeit</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" name="heatHour" id="heatHour" style="width: 1em">
+                    <span class="input-group-text">:</span>
+                    <input type="number" class="form-control" name="heatMinute" id="heatMinute" max="60">
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <label for="holdHour" class="form-label">Haltezeit</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" name="holdHour" id="holdHour" style="width: 1em">
+                    <span class="input-group-text">:</span>
+                    <input type="number" class="form-control" name="holdMinute" id="holdMinute" max="60">
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <label for="cooldownHour" class="form-label">Abkühlzeit</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" name="cooldownHour" id="cooldownHour" style="width: 1em">
+                    <span class="input-group-text">:</span>
+                    <input type="number" class="form-control" name="cooldownMinute" id="cooldownMinute" max="60">
+                </div>
+            </div>
+        </div>
+        <br>
+        <p class="lead text-center" id="finishText">
+            Der Ofen ist fertig am .
+        </p>
+    </div>
+</body>
+
+</html>
